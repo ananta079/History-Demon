@@ -1,0 +1,56 @@
+body {
+  font-family: "Merriweather", serif;
+  /* font-family: "Cinzel", serif; */
+  background-color: #1c0c24;
+}
+
+.cinzel {
+  font-family: "Cinzel", serif;
+}
+
+.navbar:hover {
+  background-color: #302933;
+}
+
+.demon-card {
+  position: relative;
+  aspect-ratio: 7/8;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.demon-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent 50%);
+}
+
+.demon-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  z-index: 2;
+  transform: translateY(0);
+
+  /* animasi */
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.demon-card:hover .demon-card-content {
+  transform: translateY(0);
+}
+
+@media (min-width: 992px) {
+  .demon-card-content {
+    /* geser bawah */
+    transform: translateY(calc(100% - 65px));
+  }
+}
