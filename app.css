@@ -8,9 +8,25 @@ body {
   font-family: "Cinzel", serif;
 }
 
-.navbar:hover {
-  background-color: #302933;
+.scrolled {
+  background-color: #342d3a;
 }
+
+.navbar:hover {
+  background-color: #342d3a;
+}
+
+.nav-link {
+  color: #dc3545;
+}
+
+.nav-link:hover {
+  color: #f8f9fa;
+}
+
+/* .navbar:not(.collapse) {
+  background-color: #121624;
+} */
 
 .demon-card {
   position: relative;
@@ -48,9 +64,68 @@ body {
   transform: translateY(0);
 }
 
+.demon-title {
+  color: #f8f9fa;
+}
+
+.grimoire-card {
+  /* ukuran card sama */
+  display: flex;
+  flex-direction: column;
+
+  background-color: #121624;
+  border-radius: 1rem;
+  overflow: hidden;
+  height: 100%;
+}
+
+.grimoire-img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 10/8;
+}
+
+.line {
+  width: 60px;
+  height: 4px;
+}
+
+.accordion {
+  border-style: none;
+}
+
+.accordion-button {
+  background-color: #dc3545;
+  border-style: none;
+}
+.accordion-button:not(.collapse) {
+  background-color: #dc3545;
+  border-style: none;
+}
+
+.accordion-item {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-style: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
+@media (min-width: 768px) {
+  .demon-card-content {
+    transform: translateY(calc(100% - 62px));
+  }
+
+  .demon-title {
+    color: #dc3545;
+  }
+}
+
 @media (min-width: 992px) {
   .demon-card-content {
-    /* geser bawah */
     transform: translateY(calc(100% - 65px));
   }
 }
